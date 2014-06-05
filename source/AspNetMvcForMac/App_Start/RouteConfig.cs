@@ -12,7 +12,8 @@ namespace AspNetMvcForMac
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-            routes.LowercaseUrls = true;
+			// #BUG: Error CS1061: Type `System.Web.Routing.RouteCollection' does not contain a definition for `LowercaseUrls' and no extension method `LowercaseUrls' of type `System.Web.Routing.RouteCollection' could be found. Are you missing an assembly reference? (CS1061) (AspNetMvcForMac)
+			// routes.LowercaseUrls = true;
 
             routes.MapRoute(
                 name: "Default",
